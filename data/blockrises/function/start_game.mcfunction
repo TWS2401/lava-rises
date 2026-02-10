@@ -2,6 +2,11 @@
 time set noon
 weather clear
 
+bossbar set grace_period players 0
+bossbar set rising_timer players 0
+
+kill @e[type=marker]
+
 # Set up world border
 execute store result storage blockrises:data border_size int 1 run scoreboard players get border_size RisingSettings
 function blockrises:macro_border with storage blockrises:data
