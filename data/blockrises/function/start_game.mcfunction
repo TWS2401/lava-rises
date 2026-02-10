@@ -43,4 +43,4 @@ clear @a
 scoreboard players set started RisingVars 1
 
 execute if score grace_period RisingSettings matches 1.. run function blockrises:start_grace
-execute if score grace_period RisingSettings matches ..0 run scoreboard players operation rising_timer RisingVars = interval RisingSettings
+execute if score grace_period RisingSettings matches ..0 run function blockrises:end_grace

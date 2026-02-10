@@ -7,7 +7,7 @@ scoreboard players operation rising_timer RisingVars = interval RisingSettings
 # Announce to all players
 playsound minecraft:block.bell.use master @a
 
-title @a title {"text":"Grace Period is Over!","color":"dark_red"}
+title @a title {"text":"The Challenge Begins!","color":"dark_red"}
 title @a subtitle {"text":"Good luck...","color":"red"}
 
 # Rising timer bossbar
