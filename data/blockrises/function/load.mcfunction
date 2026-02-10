@@ -11,19 +11,24 @@ execute unless score interval RisingSettings matches 1.. run scoreboard players 
 execute unless score base_increment RisingSettings matches 1.. run scoreboard players set base_increment RisingSettings 5
 execute unless score rise_exp RisingSettings matches 0.. run scoreboard players set rise_exp RisingSettings 0
 
+execute unless score started RisingVars matches 0.. run scoreboard players set started RisingVars 0
 execute unless score grace_timer RisingVars matches 0.. run scoreboard players set grace_timer RisingVars -1
 execute unless score rising_timer RisingVars matches 0.. run scoreboard players set rising_timer RisingVars -1
 execute unless score current_level RisingVars matches -63.. run scoreboard players operation current_level RisingVars = starting_level RisingSettings
 execute unless score increment RisingVars matches 0.. run scoreboard players operation current_level RisingVars = base_increment RisingSettings
 
 scoreboard players set $2 RisingVars 2
+scoreboard players set $20 RisingVars 20
+scoreboard players set $60 RisingVars 60
 scoreboard players operation border_radius RisingVars = border_size RisingSettings
 scoreboard players operation border_radius RisingVars /= $2 RisingVars
 
-data modify storage blockrises:data block_type set value "minecraft:lava"
+execute unless data storage blockrises:data block_type run data modify storage blockrises:data block_type set value "minecraft:lava"
 
 bossbar add grace_period "Grace Period"
 bossbar set grace_period color blue
 
 bossbar add rising_timer "Time Until Next Layer Rises"
 bossbar set rising_timer color red
+
+function blockrises:menu

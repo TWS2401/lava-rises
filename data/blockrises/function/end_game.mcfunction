@@ -1,3 +1,4 @@
+scoreboard players set started RisingVars 0
 scoreboard players set grace_timer RisingVars -1
 scoreboard players set rising_timer RisingVars -1
 scoreboard players operation current_level RisingVars = starting_level RisingSettings
@@ -8,3 +9,5 @@ bossbar set rising_timer players 0
 
 worldborder set 59999968
 worldborder center 0 0
+
+function blockrises:menu
