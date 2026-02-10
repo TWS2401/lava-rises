@@ -7,4 +7,3 @@ execute store result bossbar grace_period max run scoreboard players get grace_p
 execute store result bossbar grace_period value run scoreboard players get grace_period RisingSettings
 
 bossbar set grace_period players @a
-
