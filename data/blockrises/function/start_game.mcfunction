@@ -1,11 +1,14 @@
 # Reset values
+scoreboard players set grace_timer RisingVars -1
+scoreboard players set rising_timer RisingVars -1
+scoreboard players operation current_level RisingVars = starting_level RisingSettings
+scoreboard players set increment RisingVars 1
+
 time set noon
 weather clear
 
 bossbar set grace_period players 0
 bossbar set rising_timer players 0
-
-kill @e[type=marker]
 
 # Set up world border
 execute store result storage blockrises:data border_size int 1 run scoreboard players get border_size RisingSettings
@@ -13,13 +16,22 @@ function blockrises:macro_border with storage blockrises:data
 
 spreadplayers 0 0 1 29999884 false @a
 execute at @p run worldborder center ~ ~
-execute at @p run summon marker ~-99.5 ~ ~-99.5 {Tags:["corner_1"]}
-execute at @p run summon marker ~99.5 ~ ~99.5 {Tags:["corner_2"]}
 
-execute store result storage blockrises:data x_1 int 1 run data get entity @n[tag=corner_1,type=marker] Pos[0]
-execute store result storage blockrises:data z_1 int 1 run data get entity @n[tag=corner_1,type=marker] Pos[2]
-execute store result storage blockrises:data x_2 int 1 run data get entity @n[tag=corner_2,type=marker] Pos[0]
-execute store result storage blockrises:data z_2 int 1 run data get entity @n[tag=corner_2,type=marker] Pos[2]
+# Get corners of world border
+execute store result score x_1 RisingVars run data get entity @p Pos[0]
+execute store result score z_1 RisingVars run data get entity @p Pos[2]
+execute store result score x_2 RisingVars run data get entity @p Pos[0]
+execute store result score z_2 RisingVars run data get entity @p Pos[2]
+
+scoreboard players operation x_1 RisingVars += border_radius RisingVars
+scoreboard players operation z_1 RisingVars += border_radius RisingVars
+scoreboard players operation x_2 RisingVars -= border_radius RisingVars
+scoreboard players operation z_2 RisingVars -= border_radius RisingVars
+
+execute store result storage blockrises:data x_1 int 1 run scoreboard players get x_1 RisingVars
+execute store result storage blockrises:data z_1 int 1 run scoreboard players get z_1 RisingVars
+execute store result storage blockrises:data x_2 int 1 run scoreboard players get x_2 RisingVars
+execute store result storage blockrises:data z_2 int 1 run scoreboard players get z_2 RisingVars
 
 # Reset players
 effect give @a saturation 1 255 true
