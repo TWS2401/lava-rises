@@ -1,6 +1,8 @@
 scoreboard objectives add RisingSettings dummy
 scoreboard objectives add RisingVars dummy
 
+scoreboard players set height_limit RisingVars 320
+
 execute unless score border_size RisingSettings matches 1.. run scoreboard players set border_size RisingSettings 200
 execute unless score show_progress RisingSettings matches 0.. run scoreboard players set show_progress RisingSettings 1
 execute unless score grace_period RisingSettings matches 0.. run scoreboard players set grace_period RisingSettings 12000
