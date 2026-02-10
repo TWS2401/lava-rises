@@ -5,7 +5,7 @@ bossbar set grace_period players 0
 scoreboard players operation rising_timer RisingVars = interval RisingSettings
 
 # Announce to all players
-playsound minecraft:block.bell.use master @a
+execute at @a run playsound minecraft:block.bell.use master @s
 
 title @a title {"text":"The Challenge Begins!","color":"dark_red"}
 title @a subtitle {"text":"Good luck...","color":"red"}
