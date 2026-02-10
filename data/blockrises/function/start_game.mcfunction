@@ -23,5 +23,5 @@ effect give @a instant_health 1 255 true
 clear @a
 
 # Start countdown
-execute if score grace_period RisingSettings matches 1.. run scoreboard players operation grace_timer RisingVars = grace_period RisingSettings
+execute if score grace_period RisingSettings matches 1.. run function blockrises:start_grace
 execute if score grace_period RisingSettings matches ..0 run scoreboard players operation rising_timer RisingVars = interval RisingSettings
