@@ -1,7 +1,7 @@
 {
     "pack": {
         "description": "By TGM2401",
-        "min_format": 94,
+        "min_format": 80,
         "max_format": 97
     }
 }
