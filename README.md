@@ -1,16 +1,16 @@
-# Block Rises
-Minecraft, but every few minutes a block rises.
+# Lava Rises
+Minecraft, but every minute lava rises. Or water rises. Or anything you want!
 
 ## Installation
-- Download [latest release](https://github.com/TWS2401/block-rises/releases)
+- Download [latest release](https://github.com/TWS2401/lava-rises/releases)
 - Locate your world's datapack folder (`.minecraft/saves/[your_world_name]/datapacks`)
 - Place the datapack into the datapack folder
-- Make sure the datapack is enabled by using `/datapack list`. If it isn't, enable it with `/datapack enable "file/block-rises_(version_number).zip"`
+- Make sure the datapack is enabled by using `/datapack list`. If it isn't, enable it with `/datapack enable "file/lava-rises_(version_number).zip"`
 
 ## How to Use
 Upon loading the datapack, a menu will appear with the options to start the game or configure the settings. While a game is active, the menu will have the option to cancel the current game. This menu can be brought up at any time by doing `/reload`.
 
-When a game starts, players are teleported to a random location in the map with a small world border, and depending on how the datapack is configured, are given a grace period. After the grace period is over, the chosen block will begin to rise.
+When a game starts, players are teleported to a random location in the map with a small world border, and depending on how the datapack is configured, are given a grace period. After the grace period is over, the lava will begin to rise.
 
 This datapack is recommended to be played in an Amplified world on Hardcore mode.
 
