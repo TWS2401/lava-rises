@@ -1,5 +1,5 @@
 # Lava Rises
-Minecraft, but every minute lava rises. Or water rises. Or anything you want!
+Minecraft, but every minute lava rises. Or water rises. Or any block you want!
 
 ## Installation
 - Download [latest release](https://github.com/TWS2401/lava-rises/releases)
